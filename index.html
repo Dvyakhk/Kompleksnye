@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Комплексні числа на JavaScript</title>
+	<author>Dmitri Viakhk</author>
+	<link type="text/css" rel="stylesheet" href="./css/style.css" />
+	<link type="text/css" rel="stylesheet" href="css/fontello.css" />
+	<link type="text/css" rel="stylesheet" href="css/calc-complex.css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/ajax-obj.js"></script>
+		
+</head>
+<body>
+<div class="wrapper">
+<header>
+	<div class="logo">
+		<img src="./img/unnamed.png" alt="калькулятор" />
+	 Комплексні числа на<span style="color: #c34f4f"> JavaScript</span> 	 
+	</div>	 
+	<nav class="nav">
+		<ol>
+			<li onclick="showContent('developments.html')"><a href="#">Розробка</a></li>
+			<li onclick="showContent('code.html')"><a href="#"></a>Код</li>
+		</ol>
+	</nav>
+</header>
+ <div class="calc">
+ 	<div class="graf">
+ 		<div class="canv"><img src="./img/kompleksnye_chisla_dlya_chainikov_clip_image056.gif" alt="" height="546"></div>
+ 		<div class="processing calc-main"> 
+ 			<form name='forms'>
+z<sub>1</sub>=<input type='text' size='35' name='z1' value='0,0' class="calc-display"><br>
+z<sub>2</sub>=<input type='text' size='35' name='z2' value='0,0' class="calc-display"><br>
+
+<div class="calc-left">
+			<div><div onClick='sumr()'>z1+z2</div></div>
+			<div><div onClick='subr()'>z1-z2</div></div>
+			<div><div onClick='mulr()'>z1*z2</div></div>
+			<div><div onClick='divr()'>z1/z2</div></div>
+			<div><div onClick='smr()'>z1*</div></div>
+			<div><div onClick='argr()'>arg(z1)</div></div>
+			<div><div onClick='modr()'>|z1|</div></div>
+			<div><div onClick='sm2r()'>z2*</div></div>
+			<div><div onClick='stpr()'>z1**z2</div></div>
+			<div><div onClick='expr()'>exp(z1)</div></div>
+			<div><div onClick='sinr()'>sin(z1)</div></div>
+			<div><div onClick='cosr()'>cos(z1)</div></div>
+			<div><div onClick='asinr()'>arcsin(z1)</div></div>
+			<div><div onClick='atgr()'>arctg(z1)</div></div>
+			<div><div onClick='acosr()'>arccos(z1)</div></div>
+			<div><div onClick='logr()'>log(z1)</div></div>
+</div><br>
+	<br>
+R=<input type='text' size='35' name='r' value=' ' class="calc-display"><br>
+P=<input type='text' size='35' name='p' value=' ' class="calc-display"><br>
+<div class="calc-right">
+	        <div><div onClick='aisp()'>z1=P</div></div>
+			<div><div onClick='bisr()'>N=P</div></div>
+			<div><div onClick='pisr()'>M=P</div></div>
+			<div><div onClick='bisp()'>z2=P</div></div>
+			<div><div onClick='misa()'>M=z1</div></div>
+			<div><div onClick='nisb()'>N=z2</div></div>
+			<div><div onClick='rism()'>P=M</div></div>
+			<div><div onClick='risn()'>P=N</div></div>
+			
+</div>
+<br>
+
+M=<input type='text' size='35' name='m' value=' 'class="calc-display"><br>
+N=<input type='text' size='35' name='n' value=' 'class="calc-display"><br>
+</form>
+
+ 		</div>
+ 	</div> 	
+ </div>
+ <div id="contentBody">      </div>  
+  
+    <div id="loading" style="display: none">  
+    Load...  
+    </div>  
+ <div class="social">
+ 	<div class="socialdiv">
+ 		<div class="fb"><a href="https://www.facebook.com/dmytro.viakh" target="_blank"><i class="icon-facebook"></i></a></div>
+		<div class="gplus"><a href="https://plus.google.com/u/0/+PetrKruk/posts" target="_blank"><i class="icon-gplus"></i></a></div>
+		<div class="git"><a href="https://github.com/Dvyakhk" target="_blank"><i class="icon-github"></i></a></div>
+		<div class="link"><a href="https://ua.linkedin.com/pub/dmytri-viakhk/73/358/627" target="_blank"><i class="icon-linkedin"></i></a></div>
+ 	</div>
+ </div>   
+ <footer>
+ 	Dmitri Viakhk &copy; 2015 Thank You Mario But Our Princess Is in Another Castle ;-)
+ </footer>
+	
+</div>
+<script type="text/javascript" src="js/complex.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/stickynav.js"></script>
+	
+</body>
+</html>

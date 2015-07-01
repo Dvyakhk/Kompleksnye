@@ -1,0 +1,49 @@
+*{
+	transition: all .5s;
+	box-sizing: border-box;
+}
+
+html {
+     font-family: 'Lato', sans-serif;
+}
+.wrapper {
+    width: 100%;
+	margin: 0 !important;
+	padding: 0 !important;
+    
+}
+
+body {
+   background-color: #7ccacc;
+    color: #234512;
+	margin: 0;
+	padding: 0;
+}
+ 
+ 
+.content {
+	width: 1140px;
+	text-align: justify;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wrap {
+	width: 100%;
+}
+
+h2 a {
+	text-decoration-line: none;
+	list-style-type: none;
+	text-decoration: none;
+	color: #fff;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+ul{
+	margin-left: 0;
+	padding-left: 0;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style-obj.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="wrap">
+	<div class="content">
+<h1>На основі класу Complex написаний калькулятор для розрахунків з комплексними числами.</h1>
+<h2>Автор: Dmitri Viakhk, <a href="email:dmitriy.vyakhk@gmail.com"> dmitriy.vyakhk@gmail.com</a></h2>
+<date>27.06.2015 14:13</date>
+
+<p>Відомо, що JavaScript не підтримує роботу з комплексними числами. Це обмеження легко виправити. Тут знайдете простий клас, що забезпечує обчислення з комплексними числами. При створенні об'єктів конструктор класу вимагає два параметри: дійсну і уявну частини комплексного чісла. Працюємо з класом Complex наступним чином:
+</p>
+ 	
+<p>// Імпортуємо модуль</p>
+
+&lt;script src = './js/complex.js'&gt; &lt;/ script&gt;
+
+<p>// Створюємо об'єкти</p>
+
+&lt;script&gt;
+
+<p>// Z1 = i, z2 = 1 + i</p>
+
+<p>var z1 = new Complex (0,1);</p>
+
+<p>var z2 = new Complex (1,1);</p>
+
+<p>&lt;/ script&gt;</p>
+
+<h3>У класі є всі необхідні методи:</h3>
+
+<p>обчислення модуля (mod) і аргументу (arg) комплексного числа, операції додавання (sum), віднімання (sub), множення (mul) і ділення (div) комплексних чисел, функції exp, log, sin, asin, cos, acos, atg і т.д.
+</p>
+
+<h3>Наведемо відповідний приклад:</h3>
+
+<p>// Імпортуємо модуль</p>
+
+<p>&lt;script src = './js/complex.js'&gt; &lt;/ script&gt;</p>
+
+<p>&lt;script&gt;</p>
+
+<p>var z1 = new Complex (0,1);</p>
+
+<p>var z2 = new Complex (1,1);</p>
+
+<p>// Проводимо обчислення</p>
+
+<p>var z3 = z1.sum (z2);</p>
+
+<p>var z4 = z2.div (z3);</p>
+
+<p>// Вивід на дисплей забезпечує метод p</p>
+
+<p>z4.p ();</p>
+
+<p>&lt;/ script&gt;</p>
+<p>На основі класу Complex написаний калькулятор для розрахунків з комплексними числами.
+</p>
+
+	
+	
+</div>
+	
+	
+</div>
+	
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+*{
+	transition: all .5s;
+	box-sizing: border-box;
+}
+
+html {
+     font-family: 'Lato', sans-serif;
+}
+.wrapper {
+    width: 100%;
+	margin: 0 !important;
+	padding: 0 !important;
+    
+}
+
+body {
+   background-color: #7ccacc;
+    color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+author {
+	color: #7ccacc;
+}
+
+header {
+	width: 100%;
+	padding: 40px 0;
+}
+.logo {
+	width: 770px;
+	font-size: 48px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+}
+
+.logo img {
+	width: 55px;
+}
+
+nav {
+	width: 100%;
+	padding: 10px 0;
+	background: #c34f4f;
+    text-align: center;
+	border-bottom: 1px solid #751b1b;
+	border-top: 1px solid #751b1b;
+	
+}
+
+ 
+
+.social {
+	width: 100%;
+	text-align: center;
+	background-color: #09adae;
+}
+
+.socialdiv {
+	width: 1140px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.socialdiv:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+
+.fb {
+	width: 285px;
+	height: 155px;float: left;
+	text-decoration: none;
+}
+
+.fb:hover {
+	background-color: #4668b3;
+}
+
+.gplus {
+	width: 285px;
+	height: 155px;float: left;
+}
+
+.gplus:hover {
+	background-color: #d95333;
+}
+
+.git {
+	width: 285px;
+	height: 155px;float: left;
+}
+
+.git:hover {
+	background-color: #ffc09f;
+}
+
+.link {
+	width: 285px;
+	height: 155px;float: left;
+}
+
+.link:hover {
+	background-color: #0077b5;
+}
+
+.sticky{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 99;
+}
+ol {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 18px;
+	line-height: 200%;
+	height: 35px;
+	display: inline-block;
+}
+ol a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+}
+
+ol > li {
+	float: left;
+	width: 300px;
+	height: 40px;
+	border-right: 1px dashed #751b1b;
+}
+
+ol > li:first-child{
+	border-left: 1px dashed #751b1b;
+}
+
+ol >li:hover {
+	background-color: #cf6969;
+}
+
+ol >li:hover a {
+	color: #451717;
+}
+
+footer {
+	width: 100%;
+	background-color: #329ea1;
+	text-align: center;
+	padding: 30px;
+}
+
+.calc {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 40px;
+}
+.graf {
+	width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.graf:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+.canv {
+	width: 570px;
+	float: left;
+}
+.processing {
+	width: 570px;
+	float: left;	 
+}

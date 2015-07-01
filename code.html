@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Код</title>
+	<link type="text/css" rel="stylesheet" href="css/style-obj.css" />
+	 
+</head>
+<body>
+<div class="wrap">
+	<div class="content">
+		<h2>function Complex(x,y){</h2>
+		<ul>
+			<li>this.x=x;
+			  <li>this.y=y;
+			  <li>this.mod=mod;
+			  <li>this.arg=arg;
+			  <li>this.sm=sm;
+			  <li>this.sum=sum;
+			  <li>this.sub=sub;
+			  <li>this.mul=mul;
+			  <li>this.div=div;
+			  <li>this.pow=pow;
+			  <li>this.p=p;
+			  <li>this.exp=exp;
+			  <li>this.log=log;
+			  <li>this.sin=sin;
+			  <li>this.cos=cos;
+			  <li>this.tg=tg;
+			  <li>this.ctg=ctg;
+			  <li>this.stp=stp;
+			  <li>this.asin=asin;
+			  <li>this.acos=acos;
+			  <li>this.atg=atg;
+				  <h2>}</h2>
+</ul>
+<h2>function mod(){</h2>
+  <ul>
+ <li>var t=this.x*this.x+this.y*this.y;
+  <li>return Math.sqrt(t);
+	  </ul>	 
+<h2>}</h2>
+
+<h2>function arg(){</h2>
+  <ul>
+  	<li>if (this.x>0 && this.y>=0)
+    <li>return Math.atan(this.y/this.x); 
+  <li>else if (this.x<0)
+    <li>return Math.atan(this.y/this.x)+Math.PI;
+  <li>else if (this.x>0 && this.y<0)
+    <li>return Math.atan(this.y/this.x)+2*Math.PI;
+  <li>else if (this.x==0 && this.y>0)
+    <li>return Math.PI/2;
+ <li> else if (this.x==0 && this.y<0)
+    <li>return 3*Math.PI/2;
+  <li>else return 0;
+
+  </ul>
+   <h2>}</h2>
+
+
+<h2>function sum(obj){</h2>
+  <ul>
+  	<li>var u=this.x+obj.x; 
+  	<li>var v=this.y+obj.y;
+  	<li>return new Complex(u,v);
+  </ul>  
+<h2>}</h2>
+
+
+<h2>function sub(obj){</h2>
+  <ul>
+  	  <li>var u=this.x-obj.x; 
+	  <li>var v=this.y-obj.y;
+	  <li>return new Complex(u,v);
+  </ul>
+  
+<h2>}</h2>
+ 
+
+<h2>function mul(obj){</h2>
+  <ul>
+  	
+  </ul>
+  <li>var r1=this.mod(),r2=obj.mod();
+  <li>var p1=this.arg(),p2=obj.arg();
+  <li>var u=r1*r2*Math.cos(p1+p2);
+  <li>var v=r1*r2*Math.sin(p1+p2);
+  <li>return new Complex(u,v);
+<h2>}</h2>
+ 
+
+<h2>function div(obj){</h2>
+  <ul>
+	  <li>var r1=this.mod(),r2=obj.mod();
+	  <li>var p1=this.arg(),p2=obj.arg();
+	  <li>var u=r1/r2*Math.cos(p1-p2);
+	  <li>var v=r1/r2*Math.sin(p1-p2);
+	  <li>return new Complex(u,v);
+  </ul>
+ 
+<h2>}</h2>
+ 
+
+<h2>function pow(n){</h2>
+  <ul>
+  	  <li>var r=this.mod(),p=this.arg();
+	  <li>var u=Math.pow(r,n)*Math.cos(n*p);
+	  <li>var v=Math.pow(r,n)*Math.sin(n*p);
+	  <li>return new Complex(u,v);	
+  </ul>
+  
+<h2>}</h2>
+ 
+
+<h2>function p(){</h2>
+   <ul>
+    <li>if (Math.abs(this.x)<1.E-7)
+    <li>this.x=0;
+  <li>if (Math.abs(this.y)<1.E-7)
+    <li>this.y=0;
+  <li>if (this.y>=0){</h2>
+    <li>var s=this.x+'+'+this.y+'i';
+    <li>return s;
+  <h2>}</h2>
+  <li>else{</h2>
+    <li>var s=this.x+' '+this.y+'i';
+    <li>return s;	
+   </ul>   
+  <h2>}</h2>
+ 
+
+<h2>function exp(){</h2>
+    <ul>
+    	<li>with (Math){</h2>
+		<li>var u=exp(this.x)*cos(this.y);
+		<li>var v=exp(this.x)*sin(this.y);
+		<li>return new Complex(u,v);
+    </ul>    
+  <h2>}</h2>   
+
+<h2>function log(){</h2>
+    <ul>
+	    <li>with (Math){</h2>
+		<li>var u=log(this.mod());
+		<li>var v=this.arg();
+		<li>return new Complex(u,v);	 
+    </ul>    
+  <h2>}</h2> 
+
+<h2>function sm(){</h2>
+<ul>
+	<li>return new Complex(this.x,-this.y); 
+</ul>
+<h2>}</h2>
+
+<h2>function sin(){</h2>
+  <ul>
+  	  <li>var i=new Complex(0,1);
+	  <li>var t=new Complex(2,0);
+	  <li>var tm1=i.mul(this).exp();
+	  <li>var tm2=i.sm().mul(this).exp();
+	  <li>var tm3=i.mul(t);
+	  <li>return tm1.sub(tm2).div(tm3);	
+  </ul>  
+  <h2>}</h2>
+ 
+
+<h2>function cos(){</h2>
+  <ul>
+	  <li>var i=new Complex(0,1);
+	  <li>var t=new Complex(2,0);
+	  <li>var tm1=i.mul(this).exp();
+	  <li>var tm2=i.sm().mul(this).exp();
+	  <li>return tm1.sum(tm2).div(t);  	
+  </ul>  
+<h2>}</h2>
+ 
+
+<h2>function tg(){</h2>
+  <ul>
+  	<li>return this.sin().div(this.cos()); 
+  </ul>
+<h2>}</h2>
+
+<h2>function ctg(){</h2>
+ <ul>
+ 	<li>return this.cos().div(this.sin()); 
+ </ul>  
+<h2>}</h2>
+
+<h2>function stp(obj){</h2>
+ <ul>
+ 	<li>return obj.mul(this.log()).exp();	
+ </ul>
+  <h2>}</h2>
+ 
+
+<h2>function asin(){</h2>
+	<ul>
+		<li>var i=new Complex(0,1);
+		<li>var t=new Complex(1,0);
+		<li>var tm1=t.sub(this.pow(2)).pow(.5);
+		<li>var tm2=i.mul(this).sum(tm1);
+		<li>return tm2.log().div(i);	
+	</ul>	
+<h2>}</h2>
+ 
+
+<h2>function acos(){</h2>
+	<ul>
+		<li>var i=new Complex(0,1);
+		<li>var t=new Complex(1,0);
+		<li>var tm1=this.pow(2).sub(t).pow(.5);
+		<li>var tm2=this.sum(tm1);
+		<li>return tm2.log().div(i);	
+	</ul>	
+<h2>}</h2>
+ 
+<h2>function atg(){</h2>
+	<ul>
+		<li>var i=new Complex(0,1);
+		<li>var t=new Complex(1,0);
+		<li>var tm1=t.sum(i.mul(this));
+		<li>var tm2=t.sub(i.mul(this));
+		<li>return tm1.div(tm2).log().div(i.sum(i));	
+	</ul>	
+<h2>}</h2>
+	</div>
+</div>
+</body>
+</html>
